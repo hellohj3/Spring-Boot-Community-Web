@@ -1,0 +1,33 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/boot
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 699077848587-59mtu510i2l8a9ftj1cvf5v6evosr3vh.apps.googleusercontent.com
+            client-secret: 3BxD_j4aZ2YXcV4jsOy9dYN5
+          facebook:
+            client-id: 774363796641518
+            client-secret: 8a2455aa39ad97bb1991828a6568b41f
+
+coustom:
+  oauth2:
+    kakao:
+      client-id: 5ce8cc976c08a4af8b2b45847dbc708b
+
+logging.level:
+  org.hibernate.SQL: debug
