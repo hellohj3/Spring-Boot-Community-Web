@@ -16,14 +16,14 @@ public class BoardController {
 
     @GetMapping("/boards/new")
     public String createForm(Model model) {
-        return "/board/createForm";
+        return "/board/form";
     }
 
     @GetMapping("/boards/{idx}/edit")
     public String updateForm(@PathVariable Long idx,
                         Model model) {
         model.addAttribute("board", boardService.findBoardByIdx(idx));
-        return "/board/updateForm";
+        return "/board/form";
     }
 
     @GetMapping("/boards")
